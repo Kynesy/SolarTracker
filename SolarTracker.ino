@@ -2,11 +2,12 @@
 
 void setup() {
   Serial.begin(9600);
-  clock_module_initialize();
-  clock_module_set("Lun", 14, 55, 0, 22, 5, 2023);
+  clock_module_init();
+  clock_module_set("Lun", 0, 0, 0, 1, 1, 2000);
 }
 
 void loop() {
-  clock_module_get();
+  Serial.print("IN MAIN: ");
+  Serial.println(clock_module_get());
   delay(2000);
 }
