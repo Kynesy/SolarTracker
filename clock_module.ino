@@ -35,13 +35,13 @@ void clock_module_set(char* week_day, int hour, int min, int sec, int day, int m
   rtc.setDOW(dayToNum(week_day));
   rtc.setTime(hour, min, sec);
   rtc.setDate(day, month, year);
+}
 
-String clock_module_get()
-{
+String* clock_module_get(){
   String week_day = rtc.getDOWStr(FORMAT_SHORT);
   String date = rtc.getDateStr(FORMAT_SHORT, FORMAT_LITTLEENDIAN, '/');
   String time = rtc.getTimeStr(FORMAT_SHORT);
 
-  String output = week_day + " " + date + " -- " + time;
+  String output[3] = {week_day, date, time};
   return output;
 }

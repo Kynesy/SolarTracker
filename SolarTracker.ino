@@ -1,13 +1,9 @@
-//#include "C:\Users\cezar\Desktop\SolarTracker\clock_module.ino"
-
-void setup() {
+void setup(){
   Serial.begin(9600);
-  clock_module_init();
-  clock_module_set("Lun", 0, 0, 0, 1, 1, 2000);
+  sd_reader_init("sium.csv");
 }
 
-void loop() {
-  Serial.print("IN MAIN: ");
-  Serial.println(clock_module_get());
+void loop(){
+  sd_reader_append("01/01/23", "25", "1", "0");
   delay(2000);
 }
