@@ -1,9 +1,5 @@
 #include <DS1302.h>
 
-#define CM_CLK_PIN 5
-#define CM_DATA_PIN 6
-#define CM_RST_PIN 7
-
 DS1302 rtc(CM_RST_PIN, CM_DATA_PIN, CM_CLK_PIN);
 
 int dayToNum(char* day){
@@ -37,11 +33,17 @@ void clock_module_set(char* week_day, int hour, int min, int sec, int day, int m
   rtc.setDate(day, month, year);
 }
 
-String* clock_module_get(){
+String clock_module_get_weekDay(){
   String week_day = rtc.getDOWStr(FORMAT_SHORT);
-  String date = rtc.getDateStr(FORMAT_SHORT, FORMAT_LITTLEENDIAN, '/');
-  String time = rtc.getTimeStr(FORMAT_SHORT);
+  return week_day;
+}
 
-  String output[3] = {week_day, date, time};
-  return output;
+String clock_module_get_time(){
+  String time = rtc.getTimeStr(FORMAT_SHORT);
+  return time;
+}
+
+String clock_module_get_date(){
+  String date = rtc.getDateStr(FORMAT_SHORT, FORMAT_LITTLEENDIAN, '/');
+  return date;
 }

@@ -1,8 +1,3 @@
-#define PR_1 A0
-#define PR_2 A1
-#define PR_3 A2
-#define PR_4 A3
-
 int pins[] = {PR_1, PR_2, PR_3, PR_4};
 
 void photoresistor_init(){

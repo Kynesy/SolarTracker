@@ -1,11 +1,11 @@
 #include <Wire.h>
 #include <SPI.h>
 #include <Adafruit_BMP280.h>
+
 #define BMP280_ADDRESS 0x76
 Adafruit_BMP280 bmp; // I2C
 
 void bmp_module_init() {
-  Serial.println(F("BMP280 test"));
   unsigned status;
   status = bmp.begin(BMP280_ADDRESS);
   if (!status) {
@@ -25,17 +25,15 @@ void bmp_module_init() {
                   Adafruit_BMP280::SAMPLING_X16,    /* Pressure oversampling */
                   Adafruit_BMP280::FILTER_X16,      /* Filtering. */
                   Adafruit_BMP280::STANDBY_MS_500); /* Standby time. */
+  Serial.println("BMP280 inizializzato.");
 }
 
-void bmp_module_get() {
-    Serial.print(F("Temperature = "));
-    Serial.print(bmp.readTemperature());
-    Serial.println(" *C");
-    Serial.print(F("Pressure = "));
-    Serial.print(bmp.readPressure());
-    Serial.println(" Pa");
-    Serial.print(F("Approx altitude = "));
-    Serial.print(bmp.readAltitude(1013.25)); /* Adjusted to local forecast! */
-    Serial.println(" m");
-    Serial.println();
+String bmp_module_get_temp() {
+  float tempF = bmp.readTemperature();
+  return String(tempF) + " °C";
+}
+
+String bmp_module_get_pres() {
+  float presF = bmp.readPressure();
+  return String(presF) + " Pa";
 }

@@ -13,15 +13,28 @@ File dataFile;
 String fileName;
 
 void sd_reader_init(String file_name){
-  Serial.print("Initializing SD card...");
+    Serial.print("Initializing SD card...");
   fileName = file_name;
-  if (!SD.begin(4)) {
+
+  if (!SD.begin(SD_PIN)) {
     Serial.println("SD card initialization failed!");
+    while(1);
   }
   Serial.println("SD card initialized.");
 
   String header = "Time,Temperature,Pressure,Rain\n";
+
+  if (SD.exists(fileName)) {
+    Serial.print(fileName);
+    Serial.println(" already exists.");
+    SD.remove(fileName);
+    Serial.print(fileName);
+    Serial.println(" è stato rimosso.");
+  }
+
   dataFile = SD.open(fileName, FILE_WRITE);
+  Serial.print(fileName);
+  Serial.println(" e' stato creato.");
   dataFile.println(header);
   dataFile.close();
 }
