@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Solar Tracker: Riferimenti per il file sd_reader.ino</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Solar Tracker<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Caricamento in corso...</div>
+<div class="SRStatus" id="Searching">Ricerca in corso...</div>
+<div class="SRStatus" id="NoMatches">Nessun risultato</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funzioni</a> &#124;
+<a href="#var-members">Variabili</a>  </div>
+  <div class="headertitle"><div class="title">Riferimenti per il file sd_reader.ino</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Logica che gestisce il lettore di MicroSD.  
+<a href="#details">Continua...</a></p>
+<div class="textblock"><code>#include &lt;SPI.h&gt;</code><br />
+<code>#include &lt;SD.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funzioni</h2></td></tr>
+<tr class="memitem:a40ff612f929b8753308aba8c6d784ad8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sd__reader_8ino.html#a40ff612f929b8753308aba8c6d784ad8">sd_reader_init</a> (String file_name)</td></tr>
+<tr class="memdesc:a40ff612f929b8753308aba8c6d784ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione inizializza il lettore di schede MicroSD.  <br /></td></tr>
+<tr class="separator:a40ff612f929b8753308aba8c6d784ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e2f7ca4b9659478a85295e34b9e56b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sd__reader_8ino.html#a85e2f7ca4b9659478a85295e34b9e56b">sd_reader_append</a> (String time, String temperature, String pressure, String rain)</td></tr>
+<tr class="memdesc:a85e2f7ca4b9659478a85295e34b9e56b"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione è usata per appendere righe nel file CSV.  <br /></td></tr>
+<tr class="separator:a85e2f7ca4b9659478a85295e34b9e56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variabili</h2></td></tr>
+<tr class="memitem:a38e756be89c7fc3aa589a64f8d8eb2ad"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sd__reader_8ino.html#a38e756be89c7fc3aa589a64f8d8eb2ad">dataFile</a></td></tr>
+<tr class="separator:a38e756be89c7fc3aa589a64f8d8eb2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5f56162810aa1e371620c4c18cc82a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sd__reader_8ino.html#a3a5f56162810aa1e371620c4c18cc82a">fileName</a></td></tr>
+<tr class="separator:a3a5f56162810aa1e371620c4c18cc82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
+<div class="textblock"><p>Logica che gestisce il lettore di MicroSD. </p>
+<p>Il sensore è collegato con SPI :</p><ul>
+<li>CS 10</li>
+<li>MOSI 11</li>
+<li>MISO 12</li>
+<li>SCK 13 </li>
+</ul>
+</div><h2 class="groupheader">Documentazione delle funzioni</h2>
+<a id="a85e2f7ca4b9659478a85295e34b9e56b" name="a85e2f7ca4b9659478a85295e34b9e56b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e2f7ca4b9659478a85295e34b9e56b">&#9670;&#160;</a></span>sd_reader_append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sd_reader_append </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>temperature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>pressure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>rain</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La funzione è usata per appendere righe nel file CSV. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>Timestamp della rilevazione </td></tr>
+    <tr><td class="paramname">temperature</td><td>Valore della temperatura </td></tr>
+    <tr><td class="paramname">pressure</td><td>Valore della pressione </td></tr>
+    <tr><td class="paramname">rain</td><td>Vale "0" (non piove) o "1" (piove) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40ff612f929b8753308aba8c6d784ad8" name="a40ff612f929b8753308aba8c6d784ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ff612f929b8753308aba8c6d784ad8">&#9670;&#160;</a></span>sd_reader_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sd_reader_init </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La funzione inizializza il lettore di schede MicroSD. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>Indica il nome del file da scrivere. Il file deve avere estensione .csv</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Se il file esiste già sulla SD, viene prima rimosso e se ne crea un altro.</p>
+<dl class="section note"><dt>Nota</dt><dd>La funzione va chiamata nel main </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentazione delle variabili</h2>
+<a id="a38e756be89c7fc3aa589a64f8d8eb2ad" name="a38e756be89c7fc3aa589a64f8d8eb2ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e756be89c7fc3aa589a64f8d8eb2ad">&#9670;&#160;</a></span>dataFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">File dataFile</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Classe che contiene il file su cui si scrive </p>
+
+</div>
+</div>
+<a id="a3a5f56162810aa1e371620c4c18cc82a" name="a3a5f56162810aa1e371620c4c18cc82a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5f56162810aa1e371620c4c18cc82a">&#9670;&#160;</a></span>fileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String fileName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nome del file che verrà scritto sulla SD </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

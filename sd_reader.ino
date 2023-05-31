@@ -1,17 +1,30 @@
-/*
-CS    10
-MOSI  11
-MISO  12
-SCK   13
+/**
+*   @file sd_reader.ino
+*
+*   @brief Logica che gestisce il lettore di MicroSD
+*
+*   Il sensore è collegato con SPI :
+*   - CS    10
+*   - MOSI  11
+*   - MISO  12
+*   - SCK   13
 */
 
 #include <SPI.h>
 #include <SD.h>
 
-//Time, Temperature, Pressure, Rain, SunCoord
-File dataFile;
-String fileName;
+File dataFile; /**< Classe che contiene il file su cui si scrive */
+String fileName; /**< Nome del file che verrà scritto sulla SD */
 
+/**
+*   @brief La funzione inizializza il lettore di schede MicroSD
+*
+*   @param file_name Indica il nome del file da scrivere. Il file deve avere estensione .csv
+*
+*   Se il file esiste già sulla SD, viene prima rimosso e se ne crea un altro.
+*
+*   @note La funzione va chiamata nel main
+*/
 void sd_reader_init(String file_name){
     Serial.print("Initializing SD card...");
   fileName = file_name;
@@ -39,6 +52,14 @@ void sd_reader_init(String file_name){
   dataFile.close();
 }
 
+/**
+*   @brief La funzione è usata per appendere righe nel file CSV.
+*
+*   @param time Timestamp della rilevazione
+*   @param temperature Valore della temperatura
+*   @param pressure Valore della pressione
+*   @param rain Vale "0" (non piove) o "1" (piove)
+*/
 void sd_reader_append(String time, String temperature, String pressure, String rain){
   String data = time + "," + temperature + "," + pressure + "," + rain + "\n";
   

@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Solar Tracker: Riferimenti per il file bmp_module.ino</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Solar Tracker<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Caricamento in corso...</div>
+<div class="SRStatus" id="Searching">Ricerca in corso...</div>
+<div class="SRStatus" id="NoMatches">Nessun risultato</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definizioni</a> &#124;
+<a href="#func-members">Funzioni</a> &#124;
+<a href="#var-members">Variabili</a>  </div>
+  <div class="headertitle"><div class="title">Riferimenti per il file bmp_module.ino</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Logica che gestisce il sensore BMP280.  
+<a href="#details">Continua...</a></p>
+<div class="textblock"><code>#include &lt;Wire.h&gt;</code><br />
+<code>#include &lt;SPI.h&gt;</code><br />
+<code>#include &lt;Adafruit_BMP280.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definizioni</h2></td></tr>
+<tr class="memitem:a94135ecef3017d3b36c9af92bb8a79e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp__module_8ino.html#a94135ecef3017d3b36c9af92bb8a79e6">BMP280_ADDRESS</a>&#160;&#160;&#160;0x76</td></tr>
+<tr class="separator:a94135ecef3017d3b36c9af92bb8a79e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funzioni</h2></td></tr>
+<tr class="memitem:aee101d432da27543145aabda5f6faa65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp__module_8ino.html#aee101d432da27543145aabda5f6faa65">bmp_module_init</a> ()</td></tr>
+<tr class="memdesc:aee101d432da27543145aabda5f6faa65"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione serve a inizializzare il sensore.  <br /></td></tr>
+<tr class="separator:aee101d432da27543145aabda5f6faa65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2500f8211037d7c82ed1b7628b0b0433"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp__module_8ino.html#a2500f8211037d7c82ed1b7628b0b0433">bmp_module_get</a> (float *temperature, float *pressure)</td></tr>
+<tr class="memdesc:a2500f8211037d7c82ed1b7628b0b0433"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione serve per restituire i valori di pressione e temperatura.  <br /></td></tr>
+<tr class="separator:a2500f8211037d7c82ed1b7628b0b0433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variabili</h2></td></tr>
+<tr class="memitem:abaf950da15db05e1ecc077a77a6803f7"><td class="memItemLeft" align="right" valign="top">Adafruit_BMP280&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp__module_8ino.html#abaf950da15db05e1ecc077a77a6803f7">bmp</a></td></tr>
+<tr class="separator:abaf950da15db05e1ecc077a77a6803f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
+<div class="textblock"><p>Logica che gestisce il sensore BMP280. </p>
+<dl class="section note"><dt>Nota</dt><dd>Il sensore è collegato tramite I2C e va alimentato a 3.3 V </dd></dl>
+</div><h2 class="groupheader">Documentazione delle definizioni</h2>
+<a id="a94135ecef3017d3b36c9af92bb8a79e6" name="a94135ecef3017d3b36c9af92bb8a79e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94135ecef3017d3b36c9af92bb8a79e6">&#9670;&#160;</a></span>BMP280_ADDRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP280_ADDRESS&#160;&#160;&#160;0x76</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Indirizzo I2C del sensore BMP280 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentazione delle funzioni</h2>
+<a id="a2500f8211037d7c82ed1b7628b0b0433" name="a2500f8211037d7c82ed1b7628b0b0433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2500f8211037d7c82ed1b7628b0b0433">&#9670;&#160;</a></span>bmp_module_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bmp_module_get </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>temperature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>pressure</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La funzione serve per restituire i valori di pressione e temperatura. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">temperature</td><td>E' un parametro di output che conterrà la temperatura registrata </td></tr>
+    <tr><td class="paramname">pressure</td><td>E' un parametro di output che conterrà la pressione registrata </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee101d432da27543145aabda5f6faa65" name="aee101d432da27543145aabda5f6faa65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee101d432da27543145aabda5f6faa65">&#9670;&#160;</a></span>bmp_module_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bmp_module_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La funzione serve a inizializzare il sensore. </p>
+<dl class="section note"><dt>Nota</dt><dd>Deve essere richiamata nel setup </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentazione delle variabili</h2>
+<a id="abaf950da15db05e1ecc077a77a6803f7" name="abaf950da15db05e1ecc077a77a6803f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf950da15db05e1ecc077a77a6803f7">&#9670;&#160;</a></span>bmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Adafruit_BMP280 bmp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Classe del sensore BMP280 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

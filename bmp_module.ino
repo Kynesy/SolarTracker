@@ -1,10 +1,23 @@
+/**
+*   @file bmp_module.ino
+*
+*   @brief Logica che gestisce il sensore BMP280
+*
+*   @note Il sensore è collegato tramite I2C e va alimentato a 3.3 V
+*/
+
 #include <Wire.h>
 #include <SPI.h>
 #include <Adafruit_BMP280.h>
 
-#define BMP280_ADDRESS 0x76
-Adafruit_BMP280 bmp; // I2C
+#define BMP280_ADDRESS 0x76 /**< Indirizzo I2C del sensore BMP280 */
+Adafruit_BMP280 bmp; /**< Classe del sensore BMP280 */
 
+/**
+*   @brief La funzione serve a inizializzare il sensore.
+*
+*   @note Deve essere richiamata nel setup
+*/
 void bmp_module_init() {
   unsigned status;
   status = bmp.begin(BMP280_ADDRESS);
@@ -28,12 +41,13 @@ void bmp_module_init() {
   Serial.println("BMP280 inizializzato.");
 }
 
-String bmp_module_get_temp() {
-  float tempF = bmp.readTemperature();
-  return String(tempF) + " °C";
-}
-
-String bmp_module_get_pres() {
-  float presF = bmp.readPressure();
-  return String(presF) + " Pa";
+/**
+*   @brief La funzione serve per restituire i valori di pressione e temperatura.
+*
+*   @param temperature E' un parametro di output che conterrà la temperatura registrata
+*   @param pressure E' un parametro di output che conterrà la pressione registrata
+*/
+void bmp_module_get(float* temperature, float* pressure){
+  *temperature = bmp.readTemperature();
+  *pressure = bmp.readPressure();
 }
