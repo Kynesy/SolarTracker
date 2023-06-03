@@ -11,14 +11,13 @@
 
 void setup(){
   Serial.begin(9600);
-  water_sensor_init();
+  servos_init();
 }
 
 /**
 *   @brief Funzione di loop
 */
 void loop(){
-  Serial.println("MAIN: ");
-  Serial.println(water_sensor_read_digital());
-  delay(2000);
+  servos_set(90, 90);
+  delay(5000);
 }

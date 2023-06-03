@@ -9,6 +9,11 @@
 Servo servo1; /**< Classe del servomotore 1 - movimento lungo l'asse orizzontale*/
 Servo servo2; /**< Classe del servomotore 2 - movimento lungo l'asse verticale*/
 
+#define SPEED_CLOCKWISE 58
+#define SPEED_ANTICLOCKWISE 122
+
+#define STOP 90
+#define PERIOD 1000
 /**
 *   @brief La funzione inizializza i servomotori
 *
@@ -26,6 +31,20 @@ void servos_init() {
 *   @param servo_y_angle Indica l'angolo sull'asse verticale
 */
 void servos_set(int servo_x_angle, int servo_y_angle){
-  servo1.write(servo_x_angle);
+  Serial.println("Updating servos position");
+  int time1 = 0;
+  int time2 = 0;
+  if(servo_x_angle < 0){
+    time1 = map(servo_x_angle, -180, 0, 500, 0);  
+    servo1.write(SPEED_ANTICLOCKWISE);
+    delay(time1);
+  }
+  if(servo_x_angle > 0){
+    time1 = map(servo_x_angle, -180, 0, 500, 0);  
+    servo1.write(SPEED_ANTICLOCKWISE);
+    delay(time1);
+  }
+  servo1.write(STOP);
   servo2.write(servo_y_angle);
+  servo2.write(STOP);
 }
