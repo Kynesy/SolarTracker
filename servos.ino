@@ -9,11 +9,14 @@
 Servo servo1; /**< Classe del servomotore 1 - movimento lungo l'asse orizzontale*/
 Servo servo2; /**< Classe del servomotore 2 - movimento lungo l'asse verticale*/
 
-#define SPEED_CLOCKWISE 58
-#define SPEED_ANTICLOCKWISE 122
+#define SPEED_CLOCKWISE 70
+#define SPEED_ANTICLOCKWISE 120
 
 #define STOP 90
-#define PERIOD 1000
+#define PERIOD 1080
+
+int x_angle = 0;
+int y_angle = 0;
 /**
 *   @brief La funzione inizializza i servomotori
 *
@@ -30,21 +33,45 @@ void servos_init() {
 *   @param servo_x_angle Indica l'angolo sull'asse orizzontale
 *   @param servo_y_angle Indica l'angolo sull'asse verticale
 */
-void servos_set(int servo_x_angle, int servo_y_angle){
-  Serial.println("Updating servos position");
-  int time1 = 0;
-  int time2 = 0;
-  if(servo_x_angle < 0){
-    time1 = map(servo_x_angle, -180, 0, 500, 0);  
-    servo1.write(SPEED_ANTICLOCKWISE);
-    delay(time1);
+
+void XmoveClockwise(){
+  myservo.write(SPEED_CLOCKWISE);
+  delay(45);
+  myservo.write(STOP);
+  x_angle += 10;
+  if(x_angle == 360){
+    x_angle = 0;
   }
-  if(servo_x_angle > 0){
-    time1 = map(servo_x_angle, -180, 0, 500, 0);  
-    servo1.write(SPEED_ANTICLOCKWISE);
-    delay(time1);
+  delay(100);
+}
+
+void XmoveAnticlockwise(){
+  myservo.write(SPEED_ANTICLOCKWISE);
+  delay(42);
+  myservo.write(STOP);
+  x_angle -= 10;
+  if(x_angle == -360){
+    x_angle = 0;
   }
-  servo1.write(STOP);
-  servo2.write(servo_y_angle);
-  servo2.write(STOP);
+  delay(100);
+}
+
+void Y_moveDown(){
+  if(y_angle >= 10){
+    m2.write(SPEED_CLOCKWISE);
+    delay(47);
+    m2.write(STOP);
+    y_angle -= 10;
+    delay(100);
+  }
+}
+
+void Y_moveUp(){
+  if(y_angle <= 170){
+    m2.write(SPEED_ANTICLOCKWISE);
+    delay(40);
+    m2.write(STOP);
+    y_angle += 10;
+    delay(100);
+  }
 }
