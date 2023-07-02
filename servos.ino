@@ -23,8 +23,8 @@ int y_angle = 0;
 *   @note La funzione va richiamata nel setup
 */
 void servos_init() {
-  servo1.attach(SERVO_X_PIN); // attach servo 1 to pin 9
-  servo2.attach(SERVO_Y_PIN); // attach servo 2 to pin 10
+  servo1.attach(SERVO_X_PIN); // attach servo 1 to pin 5
+  servo2.attach(SERVO_Y_PIN); // attach servo 2 to pin 6
 }
 
 /**
@@ -35,9 +35,9 @@ void servos_init() {
 */
 
 void XmoveClockwise(){
-  myservo.write(SPEED_CLOCKWISE);
+  servo1.write(SPEED_CLOCKWISE);
   delay(45);
-  myservo.write(STOP);
+  servo1.write(STOP);
   x_angle += 10;
   if(x_angle == 360){
     x_angle = 0;
@@ -46,9 +46,9 @@ void XmoveClockwise(){
 }
 
 void XmoveAnticlockwise(){
-  myservo.write(SPEED_ANTICLOCKWISE);
+  servo1.write(SPEED_ANTICLOCKWISE);
   delay(42);
-  myservo.write(STOP);
+  servo1.write(STOP);
   x_angle -= 10;
   if(x_angle == -360){
     x_angle = 0;
@@ -57,20 +57,20 @@ void XmoveAnticlockwise(){
 }
 
 void Y_moveDown(){
-  if(y_angle >= 10){
-    m2.write(SPEED_CLOCKWISE);
-    delay(47);
-    m2.write(STOP);
+    if(y_angle >= 10){
+    servo2.write(SPEED_ANTICLOCKWISE);
+    delay(40);
+    servo2.write(STOP);
     y_angle -= 10;
     delay(100);
   }
 }
 
 void Y_moveUp(){
-  if(y_angle <= 170){
-    m2.write(SPEED_ANTICLOCKWISE);
-    delay(40);
-    m2.write(STOP);
+    if(y_angle <= 170){
+    servo2.write(SPEED_CLOCKWISE);
+    delay(47);
+    servo2.write(STOP);
     y_angle += 10;
     delay(100);
   }

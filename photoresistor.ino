@@ -5,6 +5,11 @@
 */
 
 int pins[] = {PR_1, PR_2, PR_3, PR_4};/**< L'array contiene i GPIO collegati ai fotoresistori */
+//pr1 giu
+//pr2 sinistra
+//pr3 sopra
+//pr4 destra
+
 
 /**
 *   @brief La funzione serve ad inizializzare i fotoresistori
@@ -25,6 +30,6 @@ void photoresistor_init(){
 */
 void photoresistor_get(int* values){
   for(int i=0; i<4; i++){
-    values[i] = map(analogRead(pins[i]), 0, 1023, 0, 5);
+    values[i] = map(analogRead(pins[i]), 0, 1023, 0, 500);
   }
 }

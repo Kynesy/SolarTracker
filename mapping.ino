@@ -16,7 +16,7 @@
 #define PR_1 A0 /**< Pin analogico del fotoresistore 1 */
 #define PR_2 A1 /**< Pin analogico del fotoresistore 2 */
 #define PR_3 A2 /**< Pin analogico del fotoresistore 3 */
-#define PR_4 A3 /**< Pin analogico del fotoresistore 1 */
+#define PR_4 A3 /**< Pin analogico del fotoresistore 4 */
 
 #define WATER_SENSOR_PIN_DIGITAL 8 /**< Pin digitale del sensore di pioggia */
 
