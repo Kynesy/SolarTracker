@@ -30,7 +30,6 @@ void clock_module_init()
 /**
 *   @brief Funzione usata per impostare ora e data sul modulo clock
 *
-*   @param week_day Numero del giorno della settimana
 *   @param hour Intero che indica l'ora (formato 24h)
 *   @param min Intero che indica il minuto
 *   @param sec Intero che indica il secondo
@@ -38,8 +37,7 @@ void clock_module_init()
 *   @param month Intero che indica il numero del mese
 *   @param year Intero che indica l'anno
 */
-void clock_module_set(int week_day, int hour, int min, int sec, int day, int month, int year){
-  rtc.setDOW(week_day);
+void clock_module_set(int hour, int min, int sec, int day, int month, int year){
   rtc.setTime(hour, min, sec);
   rtc.setDate(day, month, year);
 }
@@ -52,8 +50,7 @@ void clock_module_set(int week_day, int hour, int min, int sec, int day, int mon
 *   @param time Parametro di output che indica l'ora attuale
 *   @param date Parametro di output che indica la data attuale
 */
-void clock_module_get(String& week_day, String& time, String& date) {
-  week_day = rtc.getDOWStr();
+void clock_module_get(String& time, String& date) {
   time = rtc.getTimeStr();
   date = rtc.getDateStr();
 }

@@ -39,23 +39,18 @@ void sd_reader_init(){
 *   @param X_Angle Angolo orizzontale
 *   @param Y_Angle Angolo Verticale
 */
-void sd_reader_append(String fileName, String time, String temperature, String pressure, String rain, String X_Angle, String Y_Angle) {
-  String data = time + "," + temperature + "," + pressure + "," + rain + "," + X_Angle + "," + Y_Angle + "\n";
+void sd_reader_append(char* name, String time, float temperature, float pressure, int rain, int X_Angle, int Y_Angle){
+  File myFile = SD.open(name, FILE_WRITE);
 
-  File dataFile = SD.open(fileName, FILE_WRITE);
-  if (dataFile) {
-    dataFile.println(data);
-    dataFile.close();
-    Serial.println("SD: Data written to file.");
+  // if the file opened okay, write to it:
+  if (myFile) {
+    Serial.print("Writing to " + String(name) +"...");
+    myFile.println(time + "," + String(temperature) + "," + String(pressure) + "," + String(rain) + "," + String(X_Angle) + "," + String(Y_Angle));
+    // close the file:
+    myFile.close();
+    Serial.println("done.");
   } else {
-    // If the file doesn't exist, create it and append the data
-    dataFile = SD.open(fileName, FILE_WRITE);
-    if (dataFile) {
-      dataFile.println(data);
-      dataFile.close();
-      Serial.println("SD: Data written to new file.");
-    } else {
-      Serial.println("SD: Error opening file.");
-    }
+    // if the file didn't open, print an error:
+    Serial.println("error opening "+ String(name));
   }
 }

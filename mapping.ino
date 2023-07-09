@@ -3,7 +3,7 @@
 *
 *   @brief Il file contiene il mapping dei GPIO usati per il progetto.
 *
-*   @note Il lettore di MicroSD funzionano tramite SPI
+*   @note Il lettore di MicroSD funziona tramite SPI
 *   @note Il modulo LCD ed il sensore BMP280 funzionano tramite I2C
 */
 

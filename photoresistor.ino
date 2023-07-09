@@ -5,10 +5,11 @@
 */
 
 int pins[] = {PR_1, PR_2, PR_3, PR_4};/**< L'array contiene i GPIO collegati ai fotoresistori */
-//pr1 giu
-//pr2 sinistra
-//pr3 sopra
-//pr4 destra
+//avendo la torretta puntata contro
+//pr1 sopra
+//pr2 destra
+//pr3 sotto
+//pr4 sinistra
 
 
 /**
@@ -21,7 +22,6 @@ void photoresistor_init(){
     pinMode(pins[i], INPUT);
   }
 }
-
 
 /**
 *   @brief La funzione riempi il parametro di input con i valori di tensione letti sulle fotoresistenze
