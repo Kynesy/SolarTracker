@@ -11,41 +11,49 @@
 
 void setup(){
   Serial.begin(9600);
+
   photoresistor_init();
   servos_init();
+  bmp_module_init();
+  lcd_init();
+  water_sensor_init();
+  servos_init();
+  clock_module_init();
+  clock_module_set(1, 13, 57, 0, 9, 7, 2023);
 }
 
 /**
 *   @brief Funzione di loop
 */
 void loop(){
+  Serial.println("");
+
   int values[4];
+  float temp, press;
+  int rain;
+  String my_week_day;
+  String my_time;
+  String my_date;
+  int x_angle, y_angle;
+
+  clock_module_get(my_week_day, my_time, my_date);
   photoresistor_get(values);
+  bmp_module_get(&temp, &press);
+  rain = water_sensor_read_digital();
+  servos_get(&x_angle, &y_angle);
 
+  lcd_set(my_time, String(temp), String(press), rain);
+
+  Serial.println("X: " + String(x_angle) + " -- Y: " + String(y_angle));
+  Serial.println("Rain: " + String(rain));
+  Serial.println("Temp: " + String(temp) + " - Press: " + String(press));
   Serial.println(String(values[0]) + " " + String(values[1]) + " " + String(values[2]) + " " + String(values[3]));
-  if(values[0] > 20 || values[2] > 20){
-    if(values[0] > values[2]){
-      //muovi su
-      Y_moveUp();
-      Serial.println("SU: " + String(values[0]) + " > " + String(values[2]));
-    }else{
-      Serial.println("GIU: " + String(values[0]) + " < " + String(values[2]));
-      //muovi giù
-      Y_moveDown();
-    }
-  }
+  Serial.println(my_week_day);
+  Serial.println(my_time);
+  Serial.println(my_date);
 
-  if(values[1] > 20 || values[3] > 20){
-    if(values[1] < values[3]){
-      //muovi sinistra
-      Serial.println("Sinistra: " + String(values[1]) + " < " + String(values[3]));
-      XmoveClockwise();
-    }else{
-      //muovi destra
-      Serial.println("Destra: " + String(values[1]) + " > " + String(values[3]));
-      XmoveAnticlockwise();
-    }
-  }
-
-  delay(500);
+  delay(3000);
 }
+
+
+

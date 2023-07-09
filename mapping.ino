@@ -7,7 +7,7 @@
 *   @note Il modulo LCD ed il sensore BMP280 funzionano tramite I2C
 */
 
-#define CM_CLK_PIN 2 /**< Clock pin del modulo clock */
+#define CM_CLK_PIN 3 /**< Clock pin del modulo clock */
 #define CM_DATA_PIN 4 /**< Data pin del modulo clock */
 #define CM_RST_PIN 7 /**< Reset pin del modulo clock */
 

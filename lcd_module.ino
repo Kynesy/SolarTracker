@@ -29,11 +29,15 @@ void lcd_init(){
 *   @param temperature Indica la temperatura da mostrare
 *   @param pressure Indica la pressione da mostrare
 */
-void lcd_set(String time, String temperature, String pressure){
+void lcd_set(String time, String temperature, String pressure, int rain){
   lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print(String("Time: " + time));
+  lcd.print(String(time) + "  " + String(temperature) + "C");
 
   lcd.setCursor(0, 1);
-  lcd.print(String("T: " + temperature + " °C - P: " + pressure + "atm"));
+  if(rain == 1){
+    lcd.print(String(pressure + "atm") + "  Rain");
+  }else{
+    lcd.print(String(pressure + "atm") + "  Sun");
+  }
 }

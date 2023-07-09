@@ -38,16 +38,15 @@ void bmp_module_init() {
                   Adafruit_BMP280::SAMPLING_X16,    /* Pressure oversampling */
                   Adafruit_BMP280::FILTER_X16,      /* Filtering. */
                   Adafruit_BMP280::STANDBY_MS_500); /* Standby time. */
-  Serial.println("BMP280 inizializzato.");
 }
 
 /**
 *   @brief La funzione serve per restituire i valori di pressione e temperatura.
 *
-*   @param temperature E' un parametro di output che conterrà la temperatura registrata
-*   @param pressure E' un parametro di output che conterrà la pressione registrata
+*   @param temperature E' un parametro di output che conterrà la temperatura registrata in gradi celsius
+*   @param pressure E' un parametro di output che conterrà la pressione registrata in hPascal
 */
 void bmp_module_get(float* temperature, float* pressure){
   *temperature = bmp.readTemperature();
-  *pressure = bmp.readPressure();
+  *pressure = bmp.readPressure() / 100;
 }

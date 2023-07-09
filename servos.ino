@@ -27,6 +27,11 @@ void servos_init() {
   servo2.attach(SERVO_Y_PIN); // attach servo 2 to pin 6
 }
 
+void servos_get(int* x, int* y){
+  x = x_angle;
+  y = y_angle;
+}
+
 /**
 *   @brief La funzione muove i servo dell'angolo specificato
 *
