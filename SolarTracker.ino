@@ -14,7 +14,7 @@
 char* fileName = "data3.csv";
 int x_angle, y_angle;
 int startTime;
-int threeshold = 20;
+int threeshold = 10;
 
 void setup(){
   Serial.begin(9600);
@@ -95,6 +95,18 @@ void sun_find(){
 void sun_follow(){
   int values[4];
   photoresistor_get(values);
+  if(values[0] >10 && values[1] >10 && values[2] >10 && values[3] >10){
+    X_moveAnticlockwise(&x_angle);
+  }
+  
+  if(values[0] >1000 || values[1] >1000 || values[2] >1000 || values[3] >1000){
+    delay(100);
+    photoresistor_get(values);
+    Serial.println("Reset Values");
+  }
+
+  //Serial.println(String(values[0]) + " - " + String(values[1]) + " - " + String(values[2]) + " - " + String(values[3]));
+
   if(values[1] < values[3] - threeshold){
     //move anticlock
     X_moveClockwise(&x_angle);

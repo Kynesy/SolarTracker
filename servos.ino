@@ -27,10 +27,7 @@ void servos_init(int* x_angle, int* y_angle) {
   *x_angle=0;
   *y_angle=0;
 
-  while(*y_angle < 90){
-    Y_moveUp(y_angle);
-    delay(100);
-  }
+  servos_vertical(y_angle);
 }
 
 void X_moveClockwise(int* x){
@@ -43,6 +40,13 @@ void X_moveClockwise(int* x){
     *x = 0;
   }
   delay(100);
+}
+
+void servos_vertical(int* y){
+  while(*y < 90){
+    Y_moveUp(y);
+    delay(100);
+  }
 }
 
 void X_moveAnticlockwise(int* x){
