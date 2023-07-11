@@ -16,7 +16,7 @@
 /**
 *   @brief La funzione inizializza il lettore di schede MicroSD
 *
-*   @note La funzione va chiamata nel main
+*   @note La funzione va chiamata nel setup
 */
 void sd_reader_init(){
    Serial.print("Initializing SD card...");
