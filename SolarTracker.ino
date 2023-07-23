@@ -92,8 +92,8 @@ void setup() {
   water_sensor_init();
   photoresistor_init();
   servo_init();
-  sun_find();
   sd_init();
+  sun_find();
   startInterval = millis();
 }
 
@@ -103,7 +103,6 @@ void setup() {
  */
 void loop() {
   sun_follow();
-  
   // Perform data update after a certain interval
   int tmpInterval = millis();
   if(tmpInterval - startInterval > MAX_INTERVAL){
@@ -338,7 +337,6 @@ void clock_init(int hour, int min, int sec, int day, int month, int year){
 void water_sensor_init(){
   pinMode(WATER_SENSOR_PIN_DIGITAL, INPUT);
   Serial.println("WTR| Successo inizializzazione");
-
 }
 
 /**
@@ -348,8 +346,8 @@ void water_sensor_init(){
  * whether it's raining or not. It updates the global variable isRaining accordingly.
  */
 void water_sensor_update() {
-  int water_presence = digitalRead(WATER_SENSOR_PIN_DIGITAL);     // Legge il valore e lo si memorizza nella variabile livelloLiquido
-  isRaining = water_presence ? true : false;                     // invia alla funzione chiamante il valore letto
+  int water_presence = digitalRead(WATER_SENSOR_PIN_DIGITAL);
+  isRaining = water_presence ? true : false;
 }
 
 /**
@@ -363,7 +361,6 @@ void photoresistor_init(){
   pinMode(SX, INPUT);
   pinMode(DX, INPUT);
   Serial.println("PR | Successo inizializzazione");
-
 }
 
 /**
@@ -380,7 +377,6 @@ static void servo_init() {
   pinMode(SERVO_Y_PIN, OUTPUT);
   
   Serial.println("SRV| Successo inizializzazione");
-
 }
 
 /**
