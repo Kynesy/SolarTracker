@@ -1,0 +1,977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Solar Tracker: Riferimenti per il file SolarTracker.ino</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Solar Tracker<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Caricamento in corso...</div>
+<div class="SRStatus" id="Searching">Ricerca in corso...</div>
+<div class="SRStatus" id="NoMatches">Nessun risultato</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definizioni</a> &#124;
+<a href="#func-members">Funzioni</a> &#124;
+<a href="#var-members">Variabili</a>  </div>
+  <div class="headertitle"><div class="title">Riferimenti per il file SolarTracker.ino</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Main program file for Sun Tracker System.  
+<a href="#details">Continua...</a></p>
+<div class="textblock"><code>#include &lt;Wire.h&gt;</code><br />
+<code>#include &lt;SPI.h&gt;</code><br />
+<code>#include &lt;Adafruit_BMP280.h&gt;</code><br />
+<code>#include &quot;SD.h&quot;</code><br />
+<code>#include &lt;LiquidCrystal_I2C.h&gt;</code><br />
+<code>#include &lt;DS1302.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definizioni</h2></td></tr>
+<tr class="memitem:afd6407becf66a9b779029bc62cf3c648"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#afd6407becf66a9b779029bc62cf3c648">CM_CLK_PIN</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:afd6407becf66a9b779029bc62cf3c648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02198b8a950c599e435331a51f981d1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a02198b8a950c599e435331a51f981d1e">CM_DATA_PIN</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a02198b8a950c599e435331a51f981d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e7a721c6d3bbb128f7ca111ec3b4be1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a0e7a721c6d3bbb128f7ca111ec3b4be1">CM_RST_PIN</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a0e7a721c6d3bbb128f7ca111ec3b4be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad104eec5bf5679ebe86fb494113175dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#ad104eec5bf5679ebe86fb494113175dd">SD_SELECT</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:ad104eec5bf5679ebe86fb494113175dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1965eaca47dbf3f87acdafc2208f04eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a1965eaca47dbf3f87acdafc2208f04eb">UP</a>&#160;&#160;&#160;A0</td></tr>
+<tr class="separator:a1965eaca47dbf3f87acdafc2208f04eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bcbb4f56d33efbe2456169e4d94c644"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a3bcbb4f56d33efbe2456169e4d94c644">DX</a>&#160;&#160;&#160;A1</td></tr>
+<tr class="separator:a3bcbb4f56d33efbe2456169e4d94c644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d2403cd566542f28e79f36f19d3049"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a22d2403cd566542f28e79f36f19d3049">SX</a>&#160;&#160;&#160;A2</td></tr>
+<tr class="separator:a22d2403cd566542f28e79f36f19d3049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af09642653903de2af0a8530215bb120f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#af09642653903de2af0a8530215bb120f">DW</a>&#160;&#160;&#160;A3</td></tr>
+<tr class="separator:af09642653903de2af0a8530215bb120f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c8cd5cc124f2e16bbee4456deedf74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#aa1c8cd5cc124f2e16bbee4456deedf74">WATER_SENSOR_PIN_DIGITAL</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:aa1c8cd5cc124f2e16bbee4456deedf74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e7798f8311163aa4dd8767cdc172d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#ad5e7798f8311163aa4dd8767cdc172d7">SERVO_X_PIN</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:ad5e7798f8311163aa4dd8767cdc172d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92febe73422951372bae00d62c732503"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a92febe73422951372bae00d62c732503">SERVO_Y_PIN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a92febe73422951372bae00d62c732503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94b9ab05a43290c5f89dda6d774ac74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#ac94b9ab05a43290c5f89dda6d774ac74">MAX_INTERVAL</a>&#160;&#160;&#160;5000</td></tr>
+<tr class="separator:ac94b9ab05a43290c5f89dda6d774ac74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funzioni</h2></td></tr>
+<tr class="memitem:ae084e1bc8ccb35ea289ba0ca4972ea6d"><td class="memItemLeft" align="right" valign="top">LiquidCrystal_I2C&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#ae084e1bc8ccb35ea289ba0ca4972ea6d">lcd</a> (0x27, 16, 2)</td></tr>
+<tr class="separator:ae084e1bc8ccb35ea289ba0ca4972ea6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135b0d621bcc29532579e540cb64adab"><td class="memItemLeft" align="right" valign="top">DS1302&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a135b0d621bcc29532579e540cb64adab">rtc</a> (<a class="el" href="_solar_tracker_8ino.html#a0e7a721c6d3bbb128f7ca111ec3b4be1">CM_RST_PIN</a>, <a class="el" href="_solar_tracker_8ino.html#a02198b8a950c599e435331a51f981d1e">CM_DATA_PIN</a>, <a class="el" href="_solar_tracker_8ino.html#afd6407becf66a9b779029bc62cf3c648">CM_CLK_PIN</a>)</td></tr>
+<tr class="separator:a135b0d621bcc29532579e540cb64adab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top"><a id="a4fc01d736fe50cf5b977f755b675f11d" name="a4fc01d736fe50cf5b977f755b675f11d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup function for the Arduino sketch. <br /></td></tr>
+<tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top"><a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loop</b> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop function for the Arduino sketch. <br /></td></tr>
+<tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6cd24be51bc2763b27c12c93b52fbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a1e6cd24be51bc2763b27c12c93b52fbe">sun_find</a> ()</td></tr>
+<tr class="memdesc:a1e6cd24be51bc2763b27c12c93b52fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the solar panel to find the sun's position.  <br /></td></tr>
+<tr class="separator:a1e6cd24be51bc2763b27c12c93b52fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d17268f04acfc4e5c9c6a7956c8c28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a77d17268f04acfc4e5c9c6a7956c8c28">sun_follow</a> ()</td></tr>
+<tr class="memdesc:a77d17268f04acfc4e5c9c6a7956c8c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continuously track the sun's position and adjust the solar panel.  <br /></td></tr>
+<tr class="separator:a77d17268f04acfc4e5c9c6a7956c8c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23e73124dc9fabae95671fe71d074a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#ac23e73124dc9fabae95671fe71d074a6">lcd_init</a> ()</td></tr>
+<tr class="memdesc:ac23e73124dc9fabae95671fe71d074a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the LCD module.  <br /></td></tr>
+<tr class="separator:ac23e73124dc9fabae95671fe71d074a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310b61cd41fbc836ed6a78d4deb8e7dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a310b61cd41fbc836ed6a78d4deb8e7dd">lcd_update</a> ()</td></tr>
+<tr class="memdesc:a310b61cd41fbc836ed6a78d4deb8e7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the LCD display with new data.  <br /></td></tr>
+<tr class="separator:a310b61cd41fbc836ed6a78d4deb8e7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5d0e9c62e2effefaed3843d9b1fd36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#aee5d0e9c62e2effefaed3843d9b1fd36">bmp_init</a> ()</td></tr>
+<tr class="memdesc:aee5d0e9c62e2effefaed3843d9b1fd36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the BMP280 module.  <br /></td></tr>
+<tr class="separator:aee5d0e9c62e2effefaed3843d9b1fd36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfa97aaaabc3123c57f00bccd2e4458"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a2cfa97aaaabc3123c57f00bccd2e4458">bmp_update</a> ()</td></tr>
+<tr class="memdesc:a2cfa97aaaabc3123c57f00bccd2e4458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update BMP280 sensor data.  <br /></td></tr>
+<tr class="separator:a2cfa97aaaabc3123c57f00bccd2e4458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd52886200c6dd45653a336aff940da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#acdd52886200c6dd45653a336aff940da">clock_init</a> (int hour, int min, int sec, int day, int month, int year)</td></tr>
+<tr class="memdesc:acdd52886200c6dd45653a336aff940da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the real-time clock module (DS1302).  <br /></td></tr>
+<tr class="separator:acdd52886200c6dd45653a336aff940da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3485a34d437262d2df962be678cec66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#aa3485a34d437262d2df962be678cec66">water_sensor_init</a> ()</td></tr>
+<tr class="memdesc:aa3485a34d437262d2df962be678cec66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the water sensor.  <br /></td></tr>
+<tr class="separator:aa3485a34d437262d2df962be678cec66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786548ebf6b849ee58662a96ca41c915"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a786548ebf6b849ee58662a96ca41c915">water_sensor_update</a> ()</td></tr>
+<tr class="memdesc:a786548ebf6b849ee58662a96ca41c915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the water sensor status.  <br /></td></tr>
+<tr class="separator:a786548ebf6b849ee58662a96ca41c915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1076b97a335b47c13cdfcda9cd463e95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a1076b97a335b47c13cdfcda9cd463e95">photoresistor_init</a> ()</td></tr>
+<tr class="memdesc:a1076b97a335b47c13cdfcda9cd463e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the photoresistor.  <br /></td></tr>
+<tr class="separator:a1076b97a335b47c13cdfcda9cd463e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a209a55e5115f0b163aa84d6c67bff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a02a209a55e5115f0b163aa84d6c67bff">X_moveSx</a> ()</td></tr>
+<tr class="memdesc:a02a209a55e5115f0b163aa84d6c67bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the X-axis servo motor to the left (counter-clockwise).  <br /></td></tr>
+<tr class="separator:a02a209a55e5115f0b163aa84d6c67bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d6f9e694924d125bbf5a81629c6273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#ae0d6f9e694924d125bbf5a81629c6273">X_moveDx</a> ()</td></tr>
+<tr class="memdesc:ae0d6f9e694924d125bbf5a81629c6273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the X-axis servo motor to the right (clockwise).  <br /></td></tr>
+<tr class="separator:ae0d6f9e694924d125bbf5a81629c6273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad0be2904134cc36ed28c7e313bec77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#abad0be2904134cc36ed28c7e313bec77">Y_moveDown</a> ()</td></tr>
+<tr class="memdesc:abad0be2904134cc36ed28c7e313bec77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the Y-axis servo motor downward.  <br /></td></tr>
+<tr class="separator:abad0be2904134cc36ed28c7e313bec77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8076e27632d0abd7ab6012cb6e2a47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a3c8076e27632d0abd7ab6012cb6e2a47">Y_moveUp</a> ()</td></tr>
+<tr class="memdesc:a3c8076e27632d0abd7ab6012cb6e2a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the Y-axis servo motor upward.  <br /></td></tr>
+<tr class="separator:a3c8076e27632d0abd7ab6012cb6e2a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b677f9d00a251da7d8d7a74441a236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a42b677f9d00a251da7d8d7a74441a236">generatePWM</a> (int servo, unsigned long pulseWidth)</td></tr>
+<tr class="memdesc:a42b677f9d00a251da7d8d7a74441a236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate PWM signal for servo motor control.  <br /></td></tr>
+<tr class="separator:a42b677f9d00a251da7d8d7a74441a236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variabili</h2></td></tr>
+<tr class="memitem:a6f214b5ad755801880f3732b43d97d23"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a6f214b5ad755801880f3732b43d97d23">threeshold</a> = 15</td></tr>
+<tr class="separator:a6f214b5ad755801880f3732b43d97d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf950da15db05e1ecc077a77a6803f7"><td class="memItemLeft" align="right" valign="top">Adafruit_BMP280&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#abaf950da15db05e1ecc077a77a6803f7">bmp</a></td></tr>
+<tr class="separator:abaf950da15db05e1ecc077a77a6803f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c8761bc1f523fe6a53db546ae83add"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a25c8761bc1f523fe6a53db546ae83add">fileName</a> = &quot;dati1.csv&quot;</td></tr>
+<tr class="separator:a25c8761bc1f523fe6a53db546ae83add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eea5bedc36e0a29487dac7dd5725035"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a5eea5bedc36e0a29487dac7dd5725035">file</a></td></tr>
+<tr class="separator:a5eea5bedc36e0a29487dac7dd5725035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae46070deeba225d9324cc562ff49ba1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#aae46070deeba225d9324cc562ff49ba1">startInterval</a></td></tr>
+<tr class="separator:aae46070deeba225d9324cc562ff49ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1d28cfbce795d6ea954ebe725241f5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#afc1d28cfbce795d6ea954ebe725241f5">temperature</a></td></tr>
+<tr class="separator:afc1d28cfbce795d6ea954ebe725241f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac870e1249bab4a2a68cc4126761d24ef"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#ac870e1249bab4a2a68cc4126761d24ef">pressure</a></td></tr>
+<tr class="separator:ac870e1249bab4a2a68cc4126761d24ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79636c55872d148953e050964ab29a97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a79636c55872d148953e050964ab29a97">isRaining</a></td></tr>
+<tr class="separator:a79636c55872d148953e050964ab29a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6fa6e39d3f73213155ec5d9e33e1fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a7d6fa6e39d3f73213155ec5d9e33e1fd">x_angle</a></td></tr>
+<tr class="separator:a7d6fa6e39d3f73213155ec5d9e33e1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b18aefd3919bc394d42553bad973ca0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_solar_tracker_8ino.html#a0b18aefd3919bc394d42553bad973ca0">y_angle</a></td></tr>
+<tr class="separator:a0b18aefd3919bc394d42553bad973ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
+<div class="textblock"><p>Main program file for Sun Tracker System. </p>
+</div><h2 class="groupheader">Documentazione delle definizioni</h2>
+<a id="afd6407becf66a9b779029bc62cf3c648" name="afd6407becf66a9b779029bc62cf3c648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6407becf66a9b779029bc62cf3c648">&#9670;&#160;</a></span>CM_CLK_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CM_CLK_PIN&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clock pin for Clock Module <br  />
+ </p>
+
+</div>
+</div>
+<a id="a02198b8a950c599e435331a51f981d1e" name="a02198b8a950c599e435331a51f981d1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02198b8a950c599e435331a51f981d1e">&#9670;&#160;</a></span>CM_DATA_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CM_DATA_PIN&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Data pin for Clock Module </p>
+
+</div>
+</div>
+<a id="a0e7a721c6d3bbb128f7ca111ec3b4be1" name="a0e7a721c6d3bbb128f7ca111ec3b4be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e7a721c6d3bbb128f7ca111ec3b4be1">&#9670;&#160;</a></span>CM_RST_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CM_RST_PIN&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reset pin for Clock Module </p>
+
+</div>
+</div>
+<a id="af09642653903de2af0a8530215bb120f" name="af09642653903de2af0a8530215bb120f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af09642653903de2af0a8530215bb120f">&#9670;&#160;</a></span>DW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DW&#160;&#160;&#160;A3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Analog Pin for DOWN photoresistor <br  />
+ </p>
+
+</div>
+</div>
+<a id="a3bcbb4f56d33efbe2456169e4d94c644" name="a3bcbb4f56d33efbe2456169e4d94c644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bcbb4f56d33efbe2456169e4d94c644">&#9670;&#160;</a></span>DX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DX&#160;&#160;&#160;A1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Analog Pin for RIGHT photoresistor </p>
+
+</div>
+</div>
+<a id="ac94b9ab05a43290c5f89dda6d774ac74" name="ac94b9ab05a43290c5f89dda6d774ac74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94b9ab05a43290c5f89dda6d774ac74">&#9670;&#160;</a></span>MAX_INTERVAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_INTERVAL&#160;&#160;&#160;5000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum interval for data update in milliseconds. </p>
+
+</div>
+</div>
+<a id="ad104eec5bf5679ebe86fb494113175dd" name="ad104eec5bf5679ebe86fb494113175dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad104eec5bf5679ebe86fb494113175dd">&#9670;&#160;</a></span>SD_SELECT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_SELECT&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ChipSelect for MicroSD Card Adapter - MOSI 11, MISO 12, SCK 13 </p>
+
+</div>
+</div>
+<a id="ad5e7798f8311163aa4dd8767cdc172d7" name="ad5e7798f8311163aa4dd8767cdc172d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e7798f8311163aa4dd8767cdc172d7">&#9670;&#160;</a></span>SERVO_X_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERVO_X_PIN&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Digital pin for Horizontal Servo </p>
+
+</div>
+</div>
+<a id="a92febe73422951372bae00d62c732503" name="a92febe73422951372bae00d62c732503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92febe73422951372bae00d62c732503">&#9670;&#160;</a></span>SERVO_Y_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERVO_Y_PIN&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Digital pin for Vertical Servo </p>
+
+</div>
+</div>
+<a id="a22d2403cd566542f28e79f36f19d3049" name="a22d2403cd566542f28e79f36f19d3049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d2403cd566542f28e79f36f19d3049">&#9670;&#160;</a></span>SX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SX&#160;&#160;&#160;A2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Analog Pin for LEFT photoresistor <br  />
+ </p>
+
+</div>
+</div>
+<a id="a1965eaca47dbf3f87acdafc2208f04eb" name="a1965eaca47dbf3f87acdafc2208f04eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1965eaca47dbf3f87acdafc2208f04eb">&#9670;&#160;</a></span>UP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UP&#160;&#160;&#160;A0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Analog Pin for UP photoresistor </p>
+
+</div>
+</div>
+<a id="aa1c8cd5cc124f2e16bbee4456deedf74" name="aa1c8cd5cc124f2e16bbee4456deedf74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c8cd5cc124f2e16bbee4456deedf74">&#9670;&#160;</a></span>WATER_SENSOR_PIN_DIGITAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WATER_SENSOR_PIN_DIGITAL&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Digital Pin Of Water Sensor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentazione delle funzioni</h2>
+<a id="aee5d0e9c62e2effefaed3843d9b1fd36" name="aee5d0e9c62e2effefaed3843d9b1fd36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5d0e9c62e2effefaed3843d9b1fd36">&#9670;&#160;</a></span>bmp_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bmp_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the BMP280 module. </p>
+<p>This function initializes the BMP280 sensor and checks if the initialization was successful. It sets the operating mode, oversampling, and filtering options. </p>
+
+</div>
+</div>
+<a id="a2cfa97aaaabc3123c57f00bccd2e4458" name="a2cfa97aaaabc3123c57f00bccd2e4458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cfa97aaaabc3123c57f00bccd2e4458">&#9670;&#160;</a></span>bmp_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bmp_update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update BMP280 sensor data. </p>
+<p>This function reads temperature and pressure data from the BMP280 sensor. It stores the values in the global variables temperature and pressure. </p>
+
+</div>
+</div>
+<a id="acdd52886200c6dd45653a336aff940da" name="acdd52886200c6dd45653a336aff940da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd52886200c6dd45653a336aff940da">&#9670;&#160;</a></span>clock_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clock_init </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the real-time clock module (DS1302). </p>
+<p>This function initializes the DS1302 real-time clock module with the provided date and time values. It configures the clock to run continuously.</p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hour</td><td>The hour value to set on the clock (0-23). </td></tr>
+    <tr><td class="paramname">min</td><td>The minute value to set on the clock (0-59). </td></tr>
+    <tr><td class="paramname">sec</td><td>The second value to set on the clock (0-59). </td></tr>
+    <tr><td class="paramname">day</td><td>The day value to set on the clock (1-31). </td></tr>
+    <tr><td class="paramname">month</td><td>The month value to set on the clock (1-12). </td></tr>
+    <tr><td class="paramname">year</td><td>The year value to set on the clock (e.g., 2023). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a42b677f9d00a251da7d8d7a74441a236" name="a42b677f9d00a251da7d8d7a74441a236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b677f9d00a251da7d8d7a74441a236">&#9670;&#160;</a></span>generatePWM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generatePWM </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>servo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>pulseWidth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate PWM signal for servo motor control. </p>
+<p>This function generates the PWM signal required to control the servo motors. It sets the specified servo pin high for a certain pulse width and then low for the remaining period to achieve the desired angle of the servo motor.</p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">servo</td><td>The pin number of the servo motor. </td></tr>
+    <tr><td class="paramname">pulseWidth</td><td>The duration (in microseconds) the PWM signal should be high. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae084e1bc8ccb35ea289ba0ca4972ea6d" name="ae084e1bc8ccb35ea289ba0ca4972ea6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae084e1bc8ccb35ea289ba0ca4972ea6d">&#9670;&#160;</a></span>lcd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LiquidCrystal_I2C lcd </td>
+          <td>(</td>
+          <td class="paramtype">0x27&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">16&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>LCD module object. </p>
+
+</div>
+</div>
+<a id="ac23e73124dc9fabae95671fe71d074a6" name="ac23e73124dc9fabae95671fe71d074a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23e73124dc9fabae95671fe71d074a6">&#9670;&#160;</a></span>lcd_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the LCD module. </p>
+<p>This function initializes the LiquidCrystal_I2C module for the LCD display. It sets up the I2C communication and initializes the LCD with backlight. </p>
+
+</div>
+</div>
+<a id="a310b61cd41fbc836ed6a78d4deb8e7dd" name="a310b61cd41fbc836ed6a78d4deb8e7dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310b61cd41fbc836ed6a78d4deb8e7dd">&#9670;&#160;</a></span>lcd_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the LCD display with new data. </p>
+<p>This function updates the content displayed on the LCD. It shows the current time, temperature, pressure, and whether it's raining or sunny. </p>
+
+</div>
+</div>
+<a id="a1076b97a335b47c13cdfcda9cd463e95" name="a1076b97a335b47c13cdfcda9cd463e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1076b97a335b47c13cdfcda9cd463e95">&#9670;&#160;</a></span>photoresistor_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void photoresistor_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the photoresistor. </p>
+<p>This function initializes the pins connected to the photoresistors as inputs. </p>
+
+</div>
+</div>
+<a id="a135b0d621bcc29532579e540cb64adab" name="a135b0d621bcc29532579e540cb64adab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a135b0d621bcc29532579e540cb64adab">&#9670;&#160;</a></span>rtc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DS1302 rtc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_solar_tracker_8ino.html#a0e7a721c6d3bbb128f7ca111ec3b4be1">CM_RST_PIN</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_solar_tracker_8ino.html#a02198b8a950c599e435331a51f981d1e">CM_DATA_PIN</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_solar_tracker_8ino.html#afd6407becf66a9b779029bc62cf3c648">CM_CLK_PIN</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Real-time clock module object. </p>
+
+</div>
+</div>
+<a id="a1e6cd24be51bc2763b27c12c93b52fbe" name="a1e6cd24be51bc2763b27c12c93b52fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e6cd24be51bc2763b27c12c93b52fbe">&#9670;&#160;</a></span>sun_find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sun_find </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotate the solar panel to find the sun's position. </p>
+<p>This function rotates the solar panel horizontally to find the sun's position. It starts by moving the panel upward until it reaches a certain angle, and then it continuously rotates the panel left and right to detect the direction of the sun. Once it identifies the sun's direction, it stops and keeps the solar panel facing the sun. This function assumes the presence of analog photoresistors connected to the pins UP and DX, representing the left and right photoresistors, respectively. </p>
+
+</div>
+</div>
+<a id="a77d17268f04acfc4e5c9c6a7956c8c28" name="a77d17268f04acfc4e5c9c6a7956c8c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d17268f04acfc4e5c9c6a7956c8c28">&#9670;&#160;</a></span>sun_follow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sun_follow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Continuously track the sun's position and adjust the solar panel. </p>
+<p>This function continuously tracks the sun's position and makes adjustments to keep the solar panel facing the sun. It uses analog photoresistors connected to the pins SX and DX to detect the intensity of sunlight on the left and right sides, respectively. Based on the readings, it decides whether to rotate the panel left or right to keep the sun at the center. It also uses a threshold value to determine the required adjustment. Additionally, it uses analog photoresistors connected to the pins UP and DW to detect the intensity of sunlight on the upper and lower sides, respectively. It adjusts the panel's vertical position accordingly to keep the sunlight balanced between the upper and lower sides. </p>
+
+</div>
+</div>
+<a id="aa3485a34d437262d2df962be678cec66" name="aa3485a34d437262d2df962be678cec66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3485a34d437262d2df962be678cec66">&#9670;&#160;</a></span>water_sensor_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void water_sensor_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the water sensor. </p>
+<p>This function initializes the water sensor pin as an input and sets up the sensor to detect the presence of water (rain). </p>
+
+</div>
+</div>
+<a id="a786548ebf6b849ee58662a96ca41c915" name="a786548ebf6b849ee58662a96ca41c915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a786548ebf6b849ee58662a96ca41c915">&#9670;&#160;</a></span>water_sensor_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void water_sensor_update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the water sensor status. </p>
+<p>This function reads the digital value from the water sensor pin and determines whether it's raining or not. It updates the global variable isRaining accordingly. </p>
+
+</div>
+</div>
+<a id="ae0d6f9e694924d125bbf5a81629c6273" name="ae0d6f9e694924d125bbf5a81629c6273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d6f9e694924d125bbf5a81629c6273">&#9670;&#160;</a></span>X_moveDx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void X_moveDx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotate the X-axis servo motor to the right (clockwise). </p>
+<p>This function rotates the X-axis servo motor to the right (clockwise) by a fixed angle. It updates the global variable x_angle to keep track of the current angle of the servo motor. </p>
+
+</div>
+</div>
+<a id="a02a209a55e5115f0b163aa84d6c67bff" name="a02a209a55e5115f0b163aa84d6c67bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a209a55e5115f0b163aa84d6c67bff">&#9670;&#160;</a></span>X_moveSx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void X_moveSx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotate the X-axis servo motor to the left (counter-clockwise). </p>
+<p>This function rotates the X-axis servo motor to the left (counter-clockwise) by a fixed angle. It updates the global variable x_angle to keep track of the current angle of the servo motor. </p>
+
+</div>
+</div>
+<a id="abad0be2904134cc36ed28c7e313bec77" name="abad0be2904134cc36ed28c7e313bec77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abad0be2904134cc36ed28c7e313bec77">&#9670;&#160;</a></span>Y_moveDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Y_moveDown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotate the Y-axis servo motor downward. </p>
+<p>This function rotates the Y-axis servo motor downward by a fixed angle. It updates the global variable y_angle to keep track of the current angle of the servo motor. </p>
+
+</div>
+</div>
+<a id="a3c8076e27632d0abd7ab6012cb6e2a47" name="a3c8076e27632d0abd7ab6012cb6e2a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8076e27632d0abd7ab6012cb6e2a47">&#9670;&#160;</a></span>Y_moveUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Y_moveUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotate the Y-axis servo motor upward. </p>
+<p>This function rotates the Y-axis servo motor upward by a fixed angle. It updates the global variable y_angle to keep track of the current angle of the servo motor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentazione delle variabili</h2>
+<a id="abaf950da15db05e1ecc077a77a6803f7" name="abaf950da15db05e1ecc077a77a6803f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf950da15db05e1ecc077a77a6803f7">&#9670;&#160;</a></span>bmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Adafruit_BMP280 bmp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>BMP280 sensor object. </p>
+
+</div>
+</div>
+<a id="a5eea5bedc36e0a29487dac7dd5725035" name="a5eea5bedc36e0a29487dac7dd5725035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eea5bedc36e0a29487dac7dd5725035">&#9670;&#160;</a></span>file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">File file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>File Object </p>
+
+</div>
+</div>
+<a id="a25c8761bc1f523fe6a53db546ae83add" name="a25c8761bc1f523fe6a53db546ae83add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25c8761bc1f523fe6a53db546ae83add">&#9670;&#160;</a></span>fileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* fileName = &quot;dati1.csv&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>File name used to store data on SD </p>
+
+</div>
+</div>
+<a id="a79636c55872d148953e050964ab29a97" name="a79636c55872d148953e050964ab29a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79636c55872d148953e050964ab29a97">&#9670;&#160;</a></span>isRaining</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isRaining</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the raining value: 1 if is raining, 0 otherwise </p>
+
+</div>
+</div>
+<a id="ac870e1249bab4a2a68cc4126761d24ef" name="ac870e1249bab4a2a68cc4126761d24ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac870e1249bab4a2a68cc4126761d24ef">&#9670;&#160;</a></span>pressure</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float pressure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the pressure value in hPa </p>
+
+</div>
+</div>
+<a id="aae46070deeba225d9324cc562ff49ba1" name="aae46070deeba225d9324cc562ff49ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae46070deeba225d9324cc562ff49ba1">&#9670;&#160;</a></span>startInterval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int startInterval</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the starting interval time </p>
+
+</div>
+</div>
+<a id="afc1d28cfbce795d6ea954ebe725241f5" name="afc1d28cfbce795d6ea954ebe725241f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1d28cfbce795d6ea954ebe725241f5">&#9670;&#160;</a></span>temperature</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float temperature</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the temperature value in Celsius degrees </p>
+
+</div>
+</div>
+<a id="a6f214b5ad755801880f3732b43d97d23" name="a6f214b5ad755801880f3732b43d97d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f214b5ad755801880f3732b43d97d23">&#9670;&#160;</a></span>threeshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int threeshold = 15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Threshold value for sun tracking servo control. </p>
+
+</div>
+</div>
+<a id="a7d6fa6e39d3f73213155ec5d9e33e1fd" name="a7d6fa6e39d3f73213155ec5d9e33e1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d6fa6e39d3f73213155ec5d9e33e1fd">&#9670;&#160;</a></span>x_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int x_angle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the horizontal angle of the Servo_X </p>
+
+</div>
+</div>
+<a id="a0b18aefd3919bc394d42553bad973ca0" name="a0b18aefd3919bc394d42553bad973ca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b18aefd3919bc394d42553bad973ca0">&#9670;&#160;</a></span>y_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int y_angle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the vertical angle of the Servo_Y </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>
