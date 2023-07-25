@@ -4,6 +4,8 @@ This is a solar tracker system implemented on an Arduino platform using the Sola
 
 ## Features
 
+**NB:**A doxygen doc is present inside the SourceCode_doc folder
+
 - Sun Position Detection: The solar tracker can detect the sun's position by rotating the solar panel horizontally until it finds the brightest direction.
 
 - Sun Tracking: Once the sun's direction is detected, the solar tracker continuously adjusts the panel's position to keep the sun at the center using analog photoresistors to maintain an optimal angle.
@@ -34,6 +36,8 @@ To set up the Solar Tracker system, follow these steps:
 3. Power on the system and ensure the components are functioning correctly.
 4. The system will start by finding the sun's position. Ensure the panel has a clear view of the sun during this calibration phase.
 5. Once the sun's position is detected, the solar panel will start tracking the sun continuously.
+
+**NB**: A *fritzing sketch* with wiring instructions is present inside the Wiring folder.
 
 ## Note
 
