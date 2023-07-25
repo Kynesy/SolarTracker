@@ -41,6 +41,8 @@ To set up the Solar Tracker system, follow these steps:
 
 **NB**: A *fritzing sketch* with wiring instructions is present inside the Wiring folder.
 
+![Cablaggio](Wiring/SolarTracker_schema.png)
+
 ## Note
 
 - The system assumes the presence of analog photoresistors connected to specific analog pins (UP, DX, SX, DW) to detect the intensity of sunlight in different directions.
