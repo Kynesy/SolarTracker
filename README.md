@@ -1,3 +1,5 @@
+![unilogo-2](https://user-images.githubusercontent.com/100310104/205032140-c5948459-de83-416f-9674-80c21668da7f.png)
+
 # Solar Tracker System
 
 This is a solar tracker system implemented on an Arduino platform using the SolarTracker.ino sketch. The system aims to maximize solar panel efficiency by continuously adjusting the panel's position to face the sun. The solar tracker utilizes analog photoresistors to detect the intensity of sunlight in different directions and adjusts the position of the solar panel's servomotors accordingly.
@@ -54,3 +56,5 @@ To set up the Solar Tracker system, follow these steps:
 ## Credits
 
 The Solar Tracker system was developed by Culcea Cezar, and it was inspired by various open-source projects and tutorials available in the Arduino community.
+
+The Solar Tracker system was developed as part of an exam for the [University of Salento (Unisalento)](https://www.unisalento.it/)
