@@ -88,7 +88,7 @@ void setup() {
   // Initialize modules and sensors
   bmp_init();
   lcd_init();
-  clock_init(12, 0, 0, 20, 7, 2023);
+  clock_init(16, 0, 0, 25, 7, 2023);
   water_sensor_init();
   photoresistor_init();
   servo_init();
@@ -110,7 +110,7 @@ void loop() {
     bmp_update();
     lcd_update();
     sd_write();
-    //sd_read();
+    sd_read();
     startInterval = millis();
   }
   delay(100);
