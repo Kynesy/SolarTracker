@@ -4,7 +4,7 @@ This is a solar tracker system implemented on an Arduino platform using the Sola
 
 ## Features
 
-**NB:**A doxygen doc is present inside the SourceCode_doc folder
+**NB:** A doxygen doc is present inside the SourceCode_doc folder
 
 - Sun Position Detection: The solar tracker can detect the sun's position by rotating the solar panel horizontally until it finds the brightest direction.
 
