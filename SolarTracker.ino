@@ -28,7 +28,7 @@ const int threeshold = 15; /**< Threshold value for sun tracking servo control. 
 LiquidCrystal_I2C lcd(0x27, 16, 2); /**< LCD module object. */
 Adafruit_BMP280 bmp; /**< BMP280 sensor object. */
 DS1302 rtc(CM_RST_PIN, CM_DATA_PIN, CM_CLK_PIN); /**< Real-time clock module object. */
-char* fileName = "dati1.csv"; /**< File name used to store data on SD */
+char* fileName = "esame1.csv"; /**< File name used to store data on SD */
 File file; /**< File Object */
 
 //VARIABLES
@@ -88,7 +88,7 @@ void setup() {
   // Initialize modules and sensors
   bmp_init();
   lcd_init();
-  clock_init(16, 0, 0, 25, 7, 2023);
+  clock_init(9, 44, 0, 31, 7, 2023);
   water_sensor_init();
   photoresistor_init();
   servo_init();
